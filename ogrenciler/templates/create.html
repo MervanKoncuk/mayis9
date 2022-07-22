@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+    <form action="" method="POST" class="container border w-50 m-auto bg-light mt-4 p-4 rounded-2" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <div class="d-flex justify-content-end">
+            <input type="submit" value="Gönder" class="btn btn-primary">
+        </div>
+        
+    </form>
+{% endblock content %}
+    
